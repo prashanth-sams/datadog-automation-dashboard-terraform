@@ -1,7 +1,7 @@
 # Live Automation Dashboard [DataDog + Terraform]
 > Live automation dashboard in Datadog using Terraform
 
-### Create Dashboard
+## Create Dashboard
 
 - Update api and app keys in `dashboard.tf` file
 
@@ -16,12 +16,14 @@
     terraform plan
     terraform apply -auto-approve
 
-### Export tests in Dashboard
-    pip install -r requirements.txt
-    export API_KEY=xxxxxxxxxxxxxxxxxx
-    python run.py
-
-### Setup
+## Test Runner
+Run and export your tests results in the DataDog Dashboard; (I used python scripting, but it can be in any languages)
+```
+pip install -r requirements.txt
+export API_KEY=xxxxxxxxxxxxxxxxxx
+python run.py
+```
+## Setup
 
 #### FOR MAC
 
