@@ -1,6 +1,8 @@
 # Live Automation Dashboard [DataDog + Terraform]
 > Live automation dashboard in Datadog using Terraform
 
+![Dashboard](https://i.imgur.com/QZtaz9p.png)
+
 ## Create Dashboard
 
 - Update api and app keys in `dashboard.tf` file
