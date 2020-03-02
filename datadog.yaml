@@ -1,0 +1,4 @@
+- name: DataDog
+  vars:
+    datadog_api_key: "c0f46a95d228fa69a150281d9b93edad"
+    datadog_app_key: "f48dba9bb77e2a1b512733001728dec79a3eaa4a"
