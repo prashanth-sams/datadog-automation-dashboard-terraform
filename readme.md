@@ -1,5 +1,5 @@
 # DataDog Automation Dashboard 
-> Provision Datadog automation dashboard using Terraform
+> Live automation dashboard in Datadog using Terraform
 
 ### Create Dashboard
 
