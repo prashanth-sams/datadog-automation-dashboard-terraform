@@ -1,16 +1,16 @@
-# DataDog Automation Dashboard 
+# Live Automation Dashboard [DataDog + Terraform]
 > Live automation dashboard in Datadog using Terraform
 
 ### Create Dashboard
 
-Update api and app keys in `dashbaotd.tf` file
+- Update api and app keys in `dashboard.tf` file
 
-    provider "datadog" {
-      api_key = "xxxxxxxxxxxxxxxxxxx"
-      app_key = "xxxxxxxxxxxxxxxxxxx"
-    }
+      provider "datadog" {
+        api_key = "xxxxxxxxxxxxxxxxxxx"
+        app_key = "xxxxxxxxxxxxxxxxxxx"
+      }
 
-Now, init, comppile and apply changes in the datadog server
+- Now, init, compile and apply changes in the datadog server
 
     terraform init
     terraform plan
