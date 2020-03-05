@@ -63,3 +63,63 @@ variable "baseline_prod_failed" {
       fr = "avg:qa.baseline.prod.failed{country:fr}"
   }
 }
+
+variable "widget_layout_desktop" {
+  type = map
+  default = {
+      height = 22
+      width = 60
+      x = 0
+      y = 0
+  }
+}
+
+variable "widget_layout_mdot" {
+  type = map
+  default = {
+      height = 22
+      width = 60
+      x = 61
+      y = 0
+  }
+}
+
+variable "widget_query_desktop" {
+  type = map
+  default = {
+      height = 22
+      width = 15
+      x = 0
+      y = 23
+  }
+}
+
+variable "widget_query_mdot" {
+  type = map
+  default = {
+      height = 22
+      width = 15
+      x = 61
+      y = 23
+  }
+}
+
+variable "widget_toplist_desktop" {
+  type = map
+  default = {
+      height = 22
+      width = 44
+      x = 16
+      y = 23
+  }
+}
+
+variable "widget_toplist_mdot" {
+  type = map
+  default = {
+      height = 22
+      width = 44
+      x = 77
+      y = 23
+  }
+}

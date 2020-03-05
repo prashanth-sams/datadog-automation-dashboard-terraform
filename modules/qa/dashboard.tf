@@ -3,7 +3,7 @@ provider "datadog" {
   app_key = var.app_key
 }
 resource "datadog_dashboard" "free_dashboard" {
-  title         = "QA Dashboard"
+  title         = "QAP Dashboard"
   description   = "Live automation dashboard"
   layout_type   = "free"
   is_read_only  = false
@@ -144,12 +144,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
     }
-    layout = {
-      height = 22
-      width = 60
-      x = 0
-      y = 0
-    }
+    layout = var.widget_layout_desktop
   }
 
   widget {
@@ -288,12 +283,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
     }
-    layout = {
-      height = 22
-      width = 60
-      x = 61
-      y = 0
-    }
+    layout = var.widget_layout_mdot
   }
 
   widget {
@@ -322,12 +312,7 @@ resource "datadog_dashboard" "free_dashboard" {
         live_span = "1h"
       }
     }
-    layout = {
-      height = 22
-      width = 15
-      x = 0
-      y = 23
-    }
+    layout = var.widget_query_desktop
   }
 
   widget {
@@ -356,12 +341,7 @@ resource "datadog_dashboard" "free_dashboard" {
         live_span = "1h"
       }
     }
-    layout = {
-      height = 22
-      width = 15
-      x = 61
-      y = 23
-    }
+    layout = var.widget_query_mdot
   }
 
   widget {
@@ -376,12 +356,7 @@ resource "datadog_dashboard" "free_dashboard" {
         live_span = "1d"
       }
     }
-    layout = {
-      height = 22
-      width = 44
-      x = 16
-      y = 23
-    }
+    layout = var.widget_toplist_desktop
   }
 
   widget {
@@ -396,12 +371,7 @@ resource "datadog_dashboard" "free_dashboard" {
         live_span = "1d"
       }
     }
-    layout = {
-      height = 22
-      width = 44
-      x = 77
-      y = 23
-    }
+    layout = var.widget_toplist_mdot
   }
 
   template_variable {
