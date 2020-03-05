@@ -5,15 +5,17 @@
 
 ## Create Dashboard
 
-- Update api and app keys in `dashboard.tf` file
+- Update api and app keys in `/dev/main.tf` file
 
-      provider "datadog" {
+      module "dashboard" {
+        source = "../modules/qa"
         api_key = "xxxxxxxxxxxxxxxxxxx"
         app_key = "xxxxxxxxxxxxxxxxxxx"
       }
 
 - Now, init, compile and apply changes in the datadog server
 
+    cd ./dev/
     terraform init
     terraform plan
     terraform apply -auto-approve
@@ -23,7 +25,7 @@ Run and export your tests results in the DataDog Dashboard; (I used python scrip
 ```
 pip install -r requirements.txt
 export API_KEY=xxxxxxxxxxxxxxxxxx
-python run.py
+python main.py
 ```
 ## Setup
 
