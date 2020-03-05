@@ -15,10 +15,12 @@
 
 - Now, init, compile and apply changes in the datadog server
 
+    ```
     cd ./dev/
     terraform init
     terraform plan
     terraform apply -auto-approve
+    ```
 
 ## Test Runner
 Run and export your tests results in the DataDog Dashboard; (I used python scripting, but it can be in any languages)

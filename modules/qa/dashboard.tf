@@ -18,7 +18,7 @@ resource "datadog_dashboard" "free_dashboard" {
         live_span = "1h"
       }
       request {
-        q= "avg:qa.baseline.uat.passed{country:us}"
+        q= var.baseline_uat_passed["us"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -27,7 +27,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.failed{country:us}"
+        q= var.baseline_uat_failed["us"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -36,7 +36,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.passed{country:in}"
+        q= var.baseline_uat_passed["in"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -45,7 +45,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.failed{country:in}"
+        q= var.baseline_uat_failed["in"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -54,7 +54,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.passed{country:af}"
+        q= var.baseline_uat_passed["af"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -63,7 +63,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.failed{country:af}"
+        q= var.baseline_uat_failed["af"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -72,7 +72,7 @@ resource "datadog_dashboard" "free_dashboard" {
         } 
       }
       request {
-        q= "avg:qa.baseline.uat.passed{country:eg}"
+        q= var.baseline_uat_passed["eg"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -81,7 +81,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.failed{country:eg}"
+        q= var.baseline_uat_failed["eg"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -90,7 +90,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.passed{country:au}"
+        q= var.baseline_uat_passed["au"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -99,7 +99,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.failed{country:au}"
+        q= var.baseline_uat_failed["au"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -108,7 +108,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.passed{country:tz}"
+        q= var.baseline_uat_passed["tz"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -117,7 +117,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.failed{country:tz}"
+        q= var.baseline_uat_failed["tz"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -126,7 +126,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.passed{country:fr}"
+        q= var.baseline_uat_passed["fr"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -135,7 +135,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.uat.failed{country:fr}"
+        q= var.baseline_uat_failed["fr"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -162,7 +162,7 @@ resource "datadog_dashboard" "free_dashboard" {
         live_span = "1h"
       }
       request {
-        q= "avg:qa.baseline.prod.passed{country:us}"
+        q= var.baseline_prod_passed["us"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -171,7 +171,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.failed{country:us}"
+        q= var.baseline_prod_failed["us"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -180,7 +180,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.passed{country:in}"
+        q= var.baseline_prod_passed["in"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -189,7 +189,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.failed{country:in}"
+        q= var.baseline_prod_failed["in"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -198,7 +198,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.passed{country:af}"
+        q= var.baseline_prod_passed["af"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -207,7 +207,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.failed{country:af}"
+        q= var.baseline_prod_failed["af"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -216,7 +216,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.passed{country:eg}"
+        q= var.baseline_prod_passed["eg"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -225,7 +225,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.failed{country:eg}"
+        q= var.baseline_prod_failed["eg"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -234,7 +234,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.passed{country:au}"
+        q= var.baseline_prod_passed["au"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -243,7 +243,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.failed{country:au}"
+        q= var.baseline_prod_failed["au"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -252,7 +252,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.passed{country:tz}"
+        q= var.baseline_prod_passed["tz"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -261,7 +261,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.failed{country:tz}"
+        q= var.baseline_prod_failed["tz"]
         display_type = "bars"
         style {
           palette = "orange"
@@ -270,7 +270,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.passed{country:fr}"
+        q= var.baseline_prod_passed["fr"]
         display_type = "bars"
         style {
           palette = "cool"
@@ -279,7 +279,7 @@ resource "datadog_dashboard" "free_dashboard" {
         }
       }
       request {
-        q= "avg:qa.baseline.prod.failed{country:fr}"
+        q= var.baseline_prod_failed["fr"]
         display_type = "bars"
         style {
           palette = "orange"
