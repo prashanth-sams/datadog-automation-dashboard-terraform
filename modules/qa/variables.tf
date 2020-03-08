@@ -123,3 +123,13 @@ variable "widget_toplist_mdot" {
       y = 23
   }
 }
+
+variable "widget_hostmap_zalenium" {
+  type = map
+  default = {
+      height = 45
+      width = 34
+      x = 122
+      y = 0
+  }
+}

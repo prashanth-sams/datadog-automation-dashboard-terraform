@@ -374,6 +374,29 @@ resource "datadog_dashboard" "free_dashboard" {
     layout = var.widget_toplist_mdot
   }
 
+  widget {
+    hostmap_definition {
+      request {
+        fill {
+          q = "avg:process.stat.container.io.wbps{app:zalenium} by {host}"
+        }
+      }
+      node_type= "container"
+      group = []
+      no_group_hosts = true
+      no_metric_hosts = true
+      scope = ["app:zalenium"]
+      style {
+        palette = "green_to_orange"
+        palette_flip = false
+      }
+      title = "ZALENIUM PODS"
+      title_size = 16
+      title_align = "center"
+    }
+    layout = var.widget_hostmap_zalenium
+  }
+
   template_variable {
     name   = "var"
     default = "*"
